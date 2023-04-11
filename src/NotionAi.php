@@ -104,8 +104,14 @@ class NotionAi
         $this->getStreamHandler()
             ->handle($stream, function ($output) use (&$result) {
                 $result .= $output;
-                if ($this->streamCallback) {
-                    $this->streamCallback($output);
+                if ($callback = $this->streamCallback) {
+                    $callback($output);
+                    return;
+                }
+                // only clean buffer if no stream callback is assigned
+                if (ob_get_length()) {
+                    ob_get_flush();
+                    flush();
                 }
             });
 

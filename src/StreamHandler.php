@@ -22,11 +22,6 @@ class StreamHandler implements StreamHandlerContract
         while (! $stream->eof()) {
             $readline = $buffer . $stream->read($this->bufferSize);
             $buffer = null;
-            if (ob_get_length()) {
-                ob_get_flush();
-                flush();
-            }
-
             $content = explode("\n", trim($readline));
             foreach ($content as $output) {
                 if (! $completion = json_decode($output, true)) {
