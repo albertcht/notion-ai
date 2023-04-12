@@ -108,11 +108,6 @@ class NotionAi
                     $callback($output);
                     return;
                 }
-                // only clean buffer if no stream callback is assigned
-                if (ob_get_length()) {
-                    ob_get_flush();
-                    flush();
-                }
             });
 
         return $result;
