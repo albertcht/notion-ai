@@ -4,6 +4,8 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/albertcht/notion-ai/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/albertcht/notion-ai/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/albertcht/notion-ai.svg?style=flat-square)](https://packagist.org/packages/albertcht/notion-ai)
 
+![](https://raw.githubusercontent.com/albertcht/notion-ai/main/art/demo.jpg)
+
 ---
 
 ## About this package
@@ -30,11 +32,15 @@ composer require albertcht/notion-ai
 
 ## Usage
 
+* Get token and space id from Notion
+
+![](https://raw.githubusercontent.com/albertcht/notion-ai/main/art/token.png)
+![](https://raw.githubusercontent.com/albertcht/notion-ai/main/art/spaceId.png)
+
 * Initialize a Notion AI instance
 
 ```php
-$notion = new NotionAi('token', 'spaceId');
-echo $notion->helpMeWrite('give me one random quote');
+$notion = new AlbertCht\NotionAi\NotionAi('token', 'spaceId');
 ```
 
 * Set options of Guzzle client in the third paramter
@@ -42,7 +48,7 @@ echo $notion->helpMeWrite('give me one random quote');
 > See: https://docs.guzzlephp.org/en/stable/request-options.html
 
 ```php
-$notion = new NotionAi('token', 'spaceId', ['timeout' => 120]);
+$notion = new AlbertCht\NotionAi\NotionAi('token', 'spaceId', ['timeout' => 120]);
 ```
 
 * Replace a PSR Http Client if needed
@@ -146,6 +152,14 @@ public function recruitingEmail(string $prompt): ?string;
 public function prosConsList(string $prompt): ?string;
 ```
 
+## Enums
+
+There are enums you can refer to when you call APIs:
+
+* [PromptTypes](/src/Enums/PromptTypes.php)
+* [Topics](/src/Enums/Topics)
+* [Languages](/src/Enums/Languages)
+* [Tones](/src/Enums/Tones)
 
 ## Testing
 
