@@ -41,7 +41,7 @@
         }
     },
     "scripts": {
-        "test:unit": "vendor/bin/pest tests",
+        "test:unit": "pest tests",
         "test:types": "phpstan analyse --ansi",
         "test": [
             "@test:types",
