@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/albertcht/notion-ai/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/albertcht/notion-ai/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/albertcht/notion-ai.svg?style=flat-square)](https://packagist.org/packages/albertcht/notion-ai)
 
-![](https://raw.githubusercontent.com/albertcht/notion-ai/main/art/demo.jpg)
+<p align="center"><img src="/art/demo.png" alt="Demo Notion AI" width="65%"></p>
 
 ---
 
@@ -18,9 +18,7 @@ This is an unofficial PHP client for the Notion AI API that makes it easy to int
 
 <a href="https://www.buymeacoffee.com/albertcht" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-You can support us by a cup of coffee.
-
-An open-source also rely on community's contribution. Any PRs are welcome to help maintain this package.
+You can support us by a cup of coffee. An open-source also relies on community's contribution. Any PRs are welcome to help maintain this package.
 
 ## Installation
 
@@ -31,11 +29,6 @@ composer require albertcht/notion-ai
 ```
 
 ## Usage
-
-* Get token and space id from Notion
-
-![](https://raw.githubusercontent.com/albertcht/notion-ai/main/art/token.png)
-![](https://raw.githubusercontent.com/albertcht/notion-ai/main/art/spaceId.png)
 
 * Initialize a Notion AI instance
 
@@ -166,6 +159,16 @@ There are enums you can refer to when you call APIs:
 ```bash
 composer test
 ```
+
+## How to get token and space id from Notion?
+
+* Get token from Notion
+
+![Screenshot of token.](/art/token.jpg)
+
+* Get token space id from Notion
+
+![Screenshot of spaceId.](/art/spaceid.jpg)
 
 ## Changelog
 
