@@ -3,9 +3,11 @@
     "description": "Api Client of Notion AI in PHP",
     "keywords": [
         "notion-ai",
+        "openai",
         "gpt3",
         "php",
-        "api"
+        "api",
+        "api client"
     ],
     "homepage": "https://github.com/albertcht/notion-ai",
     "license": "MIT",
@@ -39,14 +41,12 @@
         }
     },
     "scripts": {
-        "test:unit": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
+        "test:unit": "vendor/bin/pest tests",
         "test:types": "phpstan analyse --ansi",
         "test": [
             "@test:types",
             "@test:unit"
-        ],
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+        ]
     },
     "config": {
         "sort-packages": true,

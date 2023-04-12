@@ -1,7 +1,7 @@
 # Notion AI API Client for PHP
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/albertcht/notion-ai.svg?style=flat-square)](https://packagist.org/packages/albertcht/notion-ai)
-[![Tests](https://img.shields.io/github/actions/workflow/status/albertcht/notion-ai/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/albertcht/notion-ai/actions/workflows/run-tests.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/albertcht/notion-ai/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/albertcht/notion-ai/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/albertcht/notion-ai.svg?style=flat-square)](https://packagist.org/packages/albertcht/notion-ai)
 
 ---
