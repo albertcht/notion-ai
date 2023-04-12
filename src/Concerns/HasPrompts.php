@@ -19,7 +19,7 @@ trait HasPrompts
         PromptTypes::CHANGE_TONE,
     ];
 
-    public function writeWithPrompt(string $promptType, string $selectedText, string $pageTitle): ?string
+    public function writeWithPrompt(string $promptType, string $selectedText, string $pageTitle = ''): ?string
     {
         $this->validatePromptType($promptType);
 
@@ -50,7 +50,7 @@ trait HasPrompts
         ]);
     }
 
-    public function helpMeWrite(string $prompt, string $previousContent, string $pageTitle = '', string $restContent = ''): ?string
+    public function helpMeWrite(string $prompt, string $previousContent = '', string $pageTitle = '', string $restContent = ''): ?string
     {
         return $this->sendRequest([
             'type' => PromptTypes::HELP_ME_WRITE,
@@ -61,7 +61,7 @@ trait HasPrompts
         ]);
     }
 
-    public function helpMeDraft(string $prompt, string $previousContent, string $pageTitle = '', string $restContent = ''): ?string
+    public function helpMeDraft(string $prompt, string $previousContent = '', string $pageTitle = '', string $restContent = ''): ?string
     {
         return $this->sendRequest([
             'type' => PromptTypes::HELP_ME_DRAFT,

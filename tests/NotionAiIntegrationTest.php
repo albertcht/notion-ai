@@ -37,7 +37,7 @@ it('can generate sentence with continueWriting api', function () use ($client) {
 
 it('can generate sentence with helpMeWrite api', function () use ($client) {
     output('<helpMeWrite api>');
-    $result = $client->helpMeWrite('give me one random quote', '');
+    $result = $client->helpMeWrite('give me one random quote');
 
     $this->assertGreaterThan(0, strlen($result));
 });
@@ -51,7 +51,7 @@ it('can generate sentence with helpMeEdit api', function () use ($client) {
 
 it('can generate sentence with helpMeDraft api', function () use ($client) {
     output('<helpMeDraft api>');
-    $result = $client->helpMeDraft('give me one random quote', '');
+    $result = $client->helpMeDraft('give me one random quote');
 
     $this->assertGreaterThan(0, strlen($result));
 });
