@@ -1,0 +1,7 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Notion AI support
+    url: https://www.notion.so/product/ai
+    about: |
+      Please only file issues here that you believe represent actual bugs or feature requests for the this package.
+      If you're having general trouble with the Notion AI, please visit their help center to get support.
