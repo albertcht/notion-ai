@@ -41,7 +41,7 @@
         }
     },
     "scripts": {
-        "test:unit": "pest tests",
+        "test:unit": "pest --colors=always",
         "test:types": "phpstan analyse --ansi",
         "test": [
             "@test:types",
