@@ -9,9 +9,10 @@ use AlbertCht\NotionAi\Exceptions\InvalidPromptException;
 use AlbertCht\NotionAi\Exceptions\InvalidTopicException;
 use AlbertCht\NotionAi\NotionAi;
 use AlbertCht\NotionAi\Tests\Stubs\DummyUuidFactory;
+use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Utils;
 use Mockery as m;
-use Psr\Http\Client\ClientInterface;
+use Psr\Http\Message\ResponseInterface;
 use Ramsey\Uuid\Uuid;
 
 it('can set psr client', function () {
@@ -183,9 +184,16 @@ function mockGuzzleClient(array $parameters)
     Uuid::setFactory($uuidFactory);
 
     $token = $parameters['token'] ?? 'token';
+
+    $response = m::mock(ResponseInterface::class);
+    $response->shouldReceive('getBody')
+        ->once()
+        ->andReturn($parameters['stream'] ?? Utils::streamFor('stream data'));
+
     $psrClient = m::mock(ClientInterface::class);
-    $psrClient->shouldReceive('post')
+    $psrClient->shouldReceive('request')
         ->with(
+            'post',
             NotionAi::BASE_URI . '/getCompletion',
             [
                 'headers' => [
@@ -200,10 +208,7 @@ function mockGuzzleClient(array $parameters)
                 ],
             ]
         )->once()
-        ->andReturnSelf()
-        ->shouldReceive('getBody')
-        ->once()
-        ->andReturn($parameters['stream'] ?? Utils::streamFor('stream data'));
+        ->andReturn($response);
 
     return $psrClient;
 }

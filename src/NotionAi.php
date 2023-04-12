@@ -6,7 +6,7 @@ use AlbertCht\NotionAi\Concerns\HasPrompts;
 use AlbertCht\NotionAi\Concerns\HasTopics;
 use AlbertCht\NotionAi\Contracts\StreamHandlerContract;
 use GuzzleHttp\Client;
-use Psr\Http\Client\ClientInterface;
+use GuzzleHttp\ClientInterface;
 use Ramsey\Uuid\Uuid;
 
 class NotionAi
@@ -87,7 +87,7 @@ class NotionAi
 
     public function sendRequest(array $context): ?string
     {
-        $stream = $this->client->post(static::BASE_URI . '/getCompletion', [
+        $stream = $this->client->request('post', static::BASE_URI . '/getCompletion', [
             'headers' => [
                 'Cookie' => "token_v2={$this->token}",
             ],
