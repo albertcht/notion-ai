@@ -150,9 +150,9 @@ public function prosConsList(string $prompt): ?string;
 There are enums you can refer to when you call APIs:
 
 * [PromptTypes](/src/Enums/PromptTypes.php)
-* [Topics](/src/Enums/Topics)
-* [Languages](/src/Enums/Languages)
-* [Tones](/src/Enums/Tones)
+* [Topics](/src/Enums/Topics.php)
+* [Languages](/src/Enums/Languages.php)
+* [Tones](/src/Enums/Tones.php)
 
 ## Testing
 
