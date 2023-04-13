@@ -166,7 +166,7 @@ composer test
 
 ![Screenshot of token.](/art/token.jpg)
 
-* Get token space id from Notion
+* Get space id from Notion
 
 ![Screenshot of spaceId.](/art/spaceid.jpg)
 
