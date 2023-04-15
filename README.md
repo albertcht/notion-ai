@@ -14,12 +14,6 @@ Notion AI is a powerful artificial intelligence feature based on GPT-3 that is p
 
 This is an unofficial PHP client for the Notion AI API that makes it easy to interact with Notion AI in your PHP projects.
 
-## Support this package
-
-<a href="https://www.buymeacoffee.com/albertcht" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
-You can support us by a cup of coffee. An open-source also relies on community's contribution. Any PRs are welcome to help maintain this package.
-
 ## Installation
 
 You can install the package via composer:
@@ -178,9 +172,15 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
-## Security Vulnerabilities
+## Security vulnerabilities
 
 Please review [our security policy](.github/SECURITY.md) on how to report security vulnerabilities.
+
+## Donation
+
+<a href="https://www.buymeacoffee.com/albertcht" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+You can support me by a cup of coffee. An open-source project also relies on community's contribution. Any PRs are welcome to help maintain this package.
 
 ## Credits
 
